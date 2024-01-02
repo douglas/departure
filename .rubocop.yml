@@ -1,4 +1,7 @@
 ---
+AllCops:
+  TargetRubyVersion: 2.4
+
 Metrics/AbcSize:
   Enabled: false
 
@@ -43,6 +46,9 @@ Style/CommandLiteral:
 
 Style/Documentation:
   Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false # We never ended up being forced to do this for Ruby 3.x
 
 Style/MultilineBlockChain:
   Exclude:
