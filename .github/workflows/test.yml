@@ -52,3 +52,29 @@ jobs:
       - run: bin/setup
       - run: bundle exec rake
       - run: bundle exec rubocop --parallel
+  lint:
+    strategy:
+      fail-fast: false
+      matrix:
+        ruby:
+          - 2.7
+        rails:
+          - 6.1.0
+    env:
+      PERCONA_DB_USER: root
+      PERCONA_DB_PASSWORD: root
+      RAILS_VERSION: "~> ${{ matrix.rails }}"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          bundler-cache: true
+      - name: "Add Percona GPG key"
+        run: sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 9334A25F8507EFA5
+      - name: "Add Percona APT repository"
+        run: echo "deb http://repo.percona.com/apt `lsb_release -cs` main" | sudo tee -a /etc/apt/sources.list
+      - run: sudo apt-get update -qq
+      - run: sudo apt-get install percona-toolkit
+      - run: bundle exec rubocop --parallel
