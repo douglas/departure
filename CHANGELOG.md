@@ -6,9 +6,12 @@ Please follow the format in [Keep a Changelog](http://keepachangelog.com/)
 
 ## [Unreleased]
 
+- Remove support for Rails 5
+
+## [6.6.0] - 2024-01-02
+
 - Fix support for Rails 6.0 and ForAlter `remove_index` .
 - Support Rails 7.1.2
-- Remove support for Rails 5
 
 ## [6.5.0] - 2023-01-24
 
