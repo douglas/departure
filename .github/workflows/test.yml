@@ -12,13 +12,10 @@ jobs:
           - 2.6
           - 2.7
         rails:
-          - 5.2.0
           - 6.0.0
           - 6.1.0
           - 7.1.2
         include:
-          - ruby: 2.4
-            rails: 5.2.0
           - ruby: 2.7
             rails: 7.0.1
           - ruby: 3.0
