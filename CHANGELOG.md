@@ -6,7 +6,7 @@ Please follow the format in [Keep a Changelog](http://keepachangelog.com/)
 
 ## [Unreleased]
 
-- Remove support for Rails 5
+- Drop support for older than the latest EOL Ruby (2.7) and Rails (6.0)
 
 ## [6.6.0] - 2024-01-02
 
