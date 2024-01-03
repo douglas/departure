@@ -6,6 +6,8 @@ Please follow the format in [Keep a Changelog](http://keepachangelog.com/)
 
 ## [Unreleased]
 
+- Drop support for older than the latest EOL Ruby (2.7) and Rails (6.0)
+
 ## [6.6.0] - 2024-01-02
 
 - Fix support for Rails 6.0 and ForAlter `remove_index` .
