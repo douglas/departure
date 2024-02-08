@@ -8,7 +8,6 @@ jobs:
       fail-fast: false
       matrix:
         ruby:
-          - 2.7
           - 3.0
           - 3.1
           - 3.2
@@ -18,15 +17,13 @@ jobs:
           - gemfiles/rails_6_1.gemfile
           - gemfiles/rails_7_0.gemfile
           - gemfiles/rails_7_1.gemfile
-        exclude: # These Rails versions are too new for the respective Ruby versions, or vice-versa
-          - ruby: 3.0
-            gemfile: gemfiles/rails_6_0.gemfile
-          - ruby: 3.1
-            gemfile: gemfiles/rails_6_0.gemfile
-          - ruby: 3.2
-            gemfile: gemfiles/rails_6_0.gemfile
-          - ruby: 3.3
-            gemfile: gemfiles/rails_6_0.gemfile
+        include:
+          - ruby: 2.7
+          - gemfile:
+            - gemfiles/ruby_2.7_rails_6_0.gemfile
+            - gemfiles/ruby_2.7_rails_6_1.gemfile
+            - gemfiles/ruby_2.7_rails_7_0.gemfile
+            - gemfiles/ruby_2.7_rails_7_1.gemfile
     env:
       PERCONA_DB_USER: root
       PERCONA_DB_PASSWORD: root
