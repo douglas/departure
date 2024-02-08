@@ -2,6 +2,9 @@
 inherit_from:
   - .rubocop_todo.yml
 
+require:
+  - rubocop-performance
+
 AllCops:
   TargetRubyVersion: 2.4
 
@@ -20,7 +23,7 @@ Metrics/BlockNesting:
 Metrics/ClassLength:
   Max: 250
 
-Metrics/LineLength:
+Layout/LineLength:
   Max: 120
   Exclude:
     - 'departure.gemspec'
@@ -37,12 +40,6 @@ Metrics/ParameterLists:
 
 Performance/Casecmp:
   Enabled: false
-
-Style/BracesAroundHashParameters:
-  Exclude:
-    - 'spec/fixtures/migrate/**.rb'
-    - 'spec/integration/**.rb'
-    - 'spec/lhm/adapter/**.rb'
 
 Style/CommandLiteral:
   Exclude:
@@ -64,6 +61,6 @@ Layout/MultilineMethodCallIndentation:
 Style/SymbolArray:
   Enabled: false
 
-Style/UnneededPercentQ:
+Style/RedundantPercentQ:
   Exclude:
     - 'departure.gemspec'
