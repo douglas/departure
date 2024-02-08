@@ -15,6 +15,7 @@ require 'lhm'
 require 'support/matchers/have_column'
 require 'support/matchers/have_index'
 require 'support/matchers/have_foreign_key_on'
+require 'support/shared_examples/column_definition_method'
 require 'support/table_methods'
 
 db_config = Configuration.new
