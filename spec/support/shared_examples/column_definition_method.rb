@@ -1,4 +1,3 @@
-# TODO: What about ENUM?
 shared_examples 'column-definition method' do |method_name|
   let(:migration) { double(:migration) }
   let(:table_name) { :comments }
