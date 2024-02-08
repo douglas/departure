@@ -52,6 +52,7 @@ jobs:
     env:
       PERCONA_DB_USER: root
       PERCONA_DB_PASSWORD: root
+      BUNDLE_GEMFILE: gemfiles/ruby_2.7_rails_7_1.gemfile
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
