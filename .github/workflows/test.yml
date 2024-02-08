@@ -30,7 +30,7 @@ jobs:
     env:
       PERCONA_DB_USER: root
       PERCONA_DB_PASSWORD: root
-      GEMFILE: ${{ matrix.gemfile }}
+      BUNDLE_GEMFILE: ${{ matrix.gemfile }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
