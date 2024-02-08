@@ -185,7 +185,6 @@ DEPENDENCIES
   climate_control (~> 0.0.3)
   codeclimate-test-reporter (~> 1.0.3)
   departure!
-  nokogiri (< 1.16)
   pry-byebug
   rake (>= 10.0)
   rspec (~> 3.4, >= 3.4.0)
